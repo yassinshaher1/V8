@@ -1,78 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Metadata and essential link tags -->
+    <!-- Existing metadata and links -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="V8 Sparkling - Healthy Refreshment">
     <meta name="author" content="Yassin Shaher">
     
-    <!-- Page title -->
     <title>V8 Sparkling - Healthy Refreshment</title>
-    
-    <!-- External stylesheet link -->
+    <base href="/">
     <link rel="stylesheet" href="stylesv8.css">
     
-    <!-- Internal styles for unique page-specific styling -->
     <style>
-        /* You can add page-specific styles here if needed */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
     </style>
 </head>
 <body>
-    <!-- Header section with navigation -->
     <header>
         <nav>
             <h1>V8 Sparkling</h1>
-            <ul>
+            <menu>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#flavors">Flavors</a></li>
                 <li><a href="#nutrition">Nutrition</a></li>
                 <li><a href="#contact">Contact</a></li>
-            </ul>
+            </menu>
         </nav>
     </header>
 
-    <!-- Main content area -->
     <main>
-        <!-- Hero section -->
         <section id="home">
             <article>
-                <h2>Healthy Refreshment Reimagined</h2>
+                <hgroup>
+                    <h2>Healthy Refreshment Reimagined</h2>
+                    <h3>Natural Ingredients, Sparkling Results</h3>
+                </hgroup>
                 <p>Experience the <mark>burst of natural flavor</mark> with V8 Sparkling!</p>
                 <figure>
                     <img src="images\all drinks.jpg" alt="V8 Sparkling Beverage" width="600" height="400">
                     <figcaption>Refreshing and Nutritious</figcaption>
                 </figure>
             </article>
+
+            <!-- New feature: Quick Facts -->
+            <aside class="quick-facts">
+                <h4>Quick Facts</h4>
+                <dl>
+                    <dt>Calories</dt>
+                    <dd>Only 50 per serving</dd>
+                    <dt>Ingredients</dt>
+                    <dd>100% natural vegetables and fruits</dd>
+                </dl>
+            </aside>
         </section>
 
-        <!-- Flavors section -->
         <section id="flavors">
             <h2>Our Sparkling Flavors</h2>
             <div class="flavor-grid">
                 <article>
                     <h3>Spicy Vegetable</h3>
                     <p>Our <em>classic</em> vegetable blend with a sparkling twist!</p>
+                    <meter value="4.5" min="0" max="5">4.5 out of 5</meter>
                 </article>
                 <article>
                     <h3>Berry Blast</h3>
                     <p>A <strong>fruity explosion</strong> of nutrition.</p>
+                    <meter value="4.8" min="0" max="5">4.8 out of 5</meter>
                 </article>
                 <article>
                     <h3>Tropical Paradise</h3>
                     <p>Exotic <cite>flavor meets health</cite>.</p>
+                    <meter value="4.6" min="0" max="5">4.6 out of 5</meter>
                 </article>
             </div>
         </section>
 
-        <!-- Nutrition Information -->
         <section id="nutrition">
             <h2>Nutrition Facts</h2>
             <details>
                 <summary>View Detailed Nutrition</summary>
                 <table>
                     <caption>V8 Sparkling Nutrition Information</caption>
+                    <colgroup>
+                        <col class="nutrient-col">
+                        <col class="amount-col">
+                    </colgroup>
                     <thead>
                         <tr>
                             <th>Nutrient</th>
@@ -93,11 +105,26 @@
                             <td>Rich in A, C, E</td>
                         </tr>
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">
+                                <small>Values per 8 fl oz serving</small>
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
             </details>
+
+            <!-- New feature: Progress Tracker -->
+            <div class="daily-values">
+                <h4>Daily Value Progress</h4>
+                <label for="vitamin-c">Vitamin C</label>
+                <progress id="vitamin-c" value="80" max="100">80%</progress>
+                <label for="vitamin-a">Vitamin A</label>
+                <progress id="vitamin-a" value="60" max="100">60%</progress>
+            </div>
         </section>
 
-        <!-- Contact Form -->
         <section id="contact">
             <h2>Contact Us</h2>
             <form>
@@ -109,8 +136,23 @@
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
 
+                    <!-- New feature: Product Selection -->
+                    <label for="product">Favorite Product:</label>
+                    <select id="product" name="product">
+                        <optgroup label="Vegetable Blends">
+                            <option value="spicy">Spicy Vegetable</option>
+                            <option value="original">Original Blend</option>
+                        </optgroup>
+                        <optgroup label="Fruit Blends">
+                            <option value="berry">Berry Blast</option>
+                            <option value="tropical">Tropical Paradise</option>
+                        </optgroup>
+                    </select>
+
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" required></textarea>
+
+                    <output name="charcount" for="message">0 characters</output>
 
                     <button type="submit">Send Message</button>
                 </fieldset>
@@ -118,19 +160,43 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 V8 Sparkling. <small>All rights reserved.</small></p>
         <address>
             Contact: <a href="mailto:info@v8sparkling.com">info@v8sparkling.com</a>
         </address>
+        <!-- New feature: Additional Links -->
+        <nav class="footer-nav">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#"><abbr title="Frequently Asked Questions">FAQ</abbr></a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </nav>
     </footer>
 
-    <!-- Optional script for interactivity -->
+    <dialog id="newsletter-popup">
+        <h3>Subscribe to Our Newsletter</h3>
+        <p>Stay updated with our latest products and offers!</p>
+        <form method="dialog">
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+            <button value="cancel">Close</button>
+        </form>
+    </dialog>
+
     <script>
-        // Placeholder for any JavaScript functionality
         document.addEventListener('DOMContentLoaded', () => {
             console.log('V8 Sparkling website loaded!');
+            
+            // Character counter for message
+            const messageArea = document.getElementById('message');
+            const charCount = document.querySelector('output[name="charcount"]');
+            
+            messageArea.addEventListener('input', () => {
+                charCount.value = `${messageArea.value.length} characters`;
+            });
         });
     </script>
 </body>
