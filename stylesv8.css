@@ -1,0 +1,180 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color Palette */
+    --primary-color: #4CAF50;
+    --secondary-color: #8BC34A;
+    --text-color: #333;
+    --background-color: #F0F4F0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Header and Navigation Styles */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Flavor Grid */
+.flavor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.flavor-grid article {
+    background-color: var(--background-color);
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.flavor-grid article:hover {
+    transform: scale(1.05);
+}
+
+/* Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem;
+    text-align: left;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .flavor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Interactive Hover Effects */
+section:hover {
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+/* Details and Summary Styles */
+details {
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Accessibility Enhancements */
+a:focus,
+button:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
