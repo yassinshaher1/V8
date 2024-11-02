@@ -98,6 +98,55 @@ input, textarea {
     border-radius: 4px;
 }
 
+/* From Uiverse.io by liyaxu123 */
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+  }
+  
+  .form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #4CAF50 solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 15px;
+    color: #060706;
+  }
+  
+  .form-control input:focus,
+  .form-control input:valid {
+    outline: 0;
+    border-bottom-color: #4CAF50;
+  }
+  
+  .form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #4CAF50;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .form-control input:focus+label span,
+  .form-control input:valid+label span {
+    color: #4CAF50;
+    transform: translateY(-30px);
+  }
+  
+  #product-label {
+    color: #4CAF50;
+}
+
 button {
     background-color: var(--primary-color);
     color: white;
@@ -309,4 +358,40 @@ tfoot {
         animation: none !important;
         transition: none !important;
     }
+}
+
+
+/* Initial styling for details element */
+details {
+    transition: max-height 1s ease-out;
+    overflow: hidden;
+    max-height: 80px; /* Closed state height */
+}
+
+/* When details are opened, adjust max-height */
+details[open] {
+    max-height: 500px; /* Adjust according to content height */
+}
+
+/* Optional styling for summary */
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+/* Optional styling for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f4f4f4;
 }

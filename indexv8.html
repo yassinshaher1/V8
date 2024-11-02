@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Existing metadata and links -->
+    <!-- Metadata and essential link tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="V8 Sparkling - Healthy Refreshment">
     <meta name="author" content="Yassin Shaher">
     
+    <!-- Page title -->
     <title>V8 Sparkling - Healthy Refreshment</title>
-    <base href="/">
+    
+    <!-- External stylesheet link -->
     <link rel="stylesheet" href="stylesv8.css">
     
+    <!-- Internal styles for unique page-specific styling -->
     <style>
+        /* You can add page-specific styles here if needed */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
     </style>
 </head>
 <body>
+    <!-- Header section with navigation -->
     <header>
         <nav>
             <h1>V8 Sparkling</h1>
@@ -28,63 +33,46 @@
         </nav>
     </header>
 
+    <!-- Main content area -->
     <main>
+        <!-- Hero section -->
         <section id="home">
             <article>
-                <hgroup>
-                    <h2>Healthy Refreshment Reimagined</h2>
-                    <h3>Natural Ingredients, Sparkling Results</h3>
-                </hgroup>
+                <h2>Healthy Refreshment Reimagined</h2>
                 <p>Experience the <mark>burst of natural flavor</mark> with V8 Sparkling!</p>
                 <figure>
                     <img src="images\all drinks.jpg" alt="V8 Sparkling Beverage" width="600" height="400">
                     <figcaption>Refreshing and Nutritious</figcaption>
                 </figure>
             </article>
-
-            <!-- New feature: Quick Facts -->
-            <aside class="quick-facts">
-                <h4>Quick Facts</h4>
-                <dl>
-                    <dt>Calories</dt>
-                    <dd>Only 50 per serving</dd>
-                    <dt>Ingredients</dt>
-                    <dd>100% natural vegetables and fruits</dd>
-                </dl>
-            </aside>
         </section>
 
+        <!-- Flavors section -->
         <section id="flavors">
             <h2>Our Sparkling Flavors</h2>
             <div class="flavor-grid">
                 <article>
                     <h3>Spicy Vegetable</h3>
                     <p>Our <em>classic</em> vegetable blend with a sparkling twist!</p>
-                    <meter value="4.5" min="0" max="5">4.5 out of 5</meter>
                 </article>
                 <article>
                     <h3>Berry Blast</h3>
                     <p>A <strong>fruity explosion</strong> of nutrition.</p>
-                    <meter value="4.8" min="0" max="5">4.8 out of 5</meter>
                 </article>
                 <article>
                     <h3>Tropical Paradise</h3>
                     <p>Exotic <cite>flavor meets health</cite>.</p>
-                    <meter value="4.6" min="0" max="5">4.6 out of 5</meter>
                 </article>
             </div>
         </section>
 
+        <!-- Nutrition Information -->
         <section id="nutrition">
             <h2>Nutrition Facts</h2>
             <details>
                 <summary>View Detailed Nutrition</summary>
                 <table>
                     <caption>V8 Sparkling Nutrition Information</caption>
-                    <colgroup>
-                        <col class="nutrient-col">
-                        <col class="amount-col">
-                    </colgroup>
                     <thead>
                         <tr>
                             <th>Nutrient</th>
@@ -114,7 +102,6 @@
                     </tfoot>
                 </table>
             </details>
-
             <!-- New feature: Progress Tracker -->
             <div class="daily-values">
                 <h4>Daily Value Progress</h4>
@@ -125,19 +112,44 @@
             </div>
         </section>
 
+        <!-- Contact Form -->
         <section id="contact">
             <h2>Contact Us</h2>
             <form>
                 <fieldset>
                     <legend>Send us a message</legend>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+        
+                    <!-- New Username input with animation -->
+                    <div class="form-control">
+                        <input type="text" id="username" name="username" required>
+                        <label>
+                            <span style="transition-delay:0ms">U</span>
+                            <span style="transition-delay:50ms">s</span>
+                            <span style="transition-delay:100ms">e</span>
+                            <span style="transition-delay:150ms">r</span>
+                            <span style="transition-delay:200ms">n</span>
+                            <span style="transition-delay:250ms">a</span>
+                            <span style="transition-delay:300ms">m</span>
+                            <span style="transition-delay:350ms">e</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-control">
+                        <input type="text" id="email" name="email" required>
+                        <label>
+                            <span style="transition-delay:0ms">E</span>
+                            <span style="transition-delay:50ms">m</span>
+                            <span style="transition-delay:100ms">a</span>
+                            <span style="transition-delay:150ms">i</span>
+                            <span style="transition-delay:200ms">l</span>
+                        </label>
+                    </div>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <!-- New feature: Product Selection -->
-                    <label for="product">Favorite Product:</label>
+                    <!-- <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required> -->
+        
+                    <!-- Product Selection -->
+                    <label for="product" id="product-label">Favorite Product:</label>
                     <select id="product" name="product">
                         <optgroup label="Vegetable Blends">
                             <option value="spicy">Spicy Vegetable</option>
@@ -148,18 +160,19 @@
                             <option value="tropical">Tropical Paradise</option>
                         </optgroup>
                     </select>
-
+        
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" required></textarea>
-
                     <output name="charcount" for="message">0 characters</output>
-
+        
                     <button type="submit">Send Message</button>
                 </fieldset>
             </form>
         </section>
+        
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 V8 Sparkling. <small>All rights reserved.</small></p>
         <address>
@@ -186,17 +199,11 @@
         </form>
     </dialog>
 
+    <!-- Optional script for interactivity -->
     <script>
+        // Placeholder for any JavaScript functionality
         document.addEventListener('DOMContentLoaded', () => {
             console.log('V8 Sparkling website loaded!');
-            
-            // Character counter for message
-            const messageArea = document.getElementById('message');
-            const charCount = document.querySelector('output[name="charcount"]');
-            
-            messageArea.addEventListener('input', () => {
-                charCount.value = `${messageArea.value.length} characters`;
-            });
         });
     </script>
 </body>
